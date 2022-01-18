@@ -5,6 +5,8 @@
  */
 package Main;
 
+import java.io.IOException;
+
 /**
  *
  * @author asus
@@ -33,7 +35,7 @@ public class Ex5 {
 
         String midlle = "";
         for (int i = 1; i < ses.length - 1; i++) {
-            midlle += ses[i];
+            midlle += ses[i]+" ";
         }
         String strOut = "";
         strOut = ses[ses.length - 1] + " " + ses[0] + " " + midlle;
@@ -42,9 +44,10 @@ public class Ex5 {
         System.out.println("OUPUT: " + standardlizeString(strOut));
     }
 
-    public static void main(String[] args) {
-
-        handling("nguyen quoc ky");
+    public static void main(String[] args) throws IOException {
+        Ex2 ex = new Ex2();
+        String fullname = ex.checkString("Enter your full name: ");
+        handling(fullname);
 
     }
 }
